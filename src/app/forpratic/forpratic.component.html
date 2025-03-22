@@ -1,0 +1,65 @@
+<div >   
+    <hr>
+    <h1>Form Modul tow way bainding </h1>
+    <hr>
+    <input [(ngModel)]="bName" type="text" placeholder="Enter Name" >
+    <h1>{{bName}}</h1>
+    <hr>
+    <h1>21 Signal Computed </h1>
+    <hr>
+    <input type="text" (change)="updateCsginal($event)"  value="{{cx()}}"/>
+    {{cz()}}
+    
+    
+    <hr>
+    <h1>Signal data type</h1>
+    <hr>
+    
+    <button (click)="updatencount()" >Add</button><br>
+    {{ncount()}}<br>
+    <button (click)="updatencount()" >Dicriment</button>
+    
+    
+    <hr>
+    <h1>Loop Array Test</h1>
+    <hr>
+    @for(user of users; track user)
+    {
+    <h1>{{user}}</h1>
+    
+    }
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>age</td>
+                <td>Email</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(student of students ; track student.name; let id = $index)
+            {
+            <tr>
+                <td>{{id+1}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.email}}</td>
+                <td><button (click)="GetName(student.name)">Click Me</button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <hr>
+    <h1>Signal & Variable</h1>
+    <hr>
+    <button (click)="count.set(this.count() + 1)" >Add</button><br>
+    {{count()}}<br>
+    <button (click)="count.set(this.count() - 1 )" >Dicriment</button>
+    <hr>
+    <button (click)="setval('inc');" >Add</button><br>
+    {{count()}}<br>
+    <button (click)="setval('dnc');" >Dicriment</button>
+    </div>

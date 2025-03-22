@@ -1,0 +1,22 @@
+.btn{
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ margin: 20px;    
+}
+.btn1{
+background-color: orange;
+color: rgb(51, 50, 49);
+}
+ .btn2{
+background-color: green;
+color: rgb(27, 29, 27);
+}
+ .btn3
+{
+    background-color: blueviolet;
+    color: rgb(37, 35, 39);
+}
+.btn:hover{
+    border: 1px solid #fff;
+}
