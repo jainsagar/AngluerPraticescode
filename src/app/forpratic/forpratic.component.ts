@@ -1,9 +1,10 @@
 import { Component,computed,signal,WritableSignal,effect } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-forpratic',
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './forpratic.component.html',
   styleUrl: './forpratic.component.css'
 })
@@ -26,6 +27,9 @@ GetName(sname:string)
 {
   alert(sname);
 }
+
+
+
 //*************************************** */
 
 count = signal(10);
